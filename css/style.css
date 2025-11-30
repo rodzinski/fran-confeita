@@ -19,10 +19,26 @@
     box-sizing: border-box;
 }
 
+header {
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
+    text-align: center;
+}
+
 header > h1 {
     font-family: var(--font-destaque);
 }
 
+body {
+    background-color: var(--cor2);
+}
+
+main {
+    background-color: var(--cor1);
+}
+
+footer {
+    background-color: var(--cor4);
+}
 
 /* Seção de feedbacks */
 .feedbacks-galeria {
