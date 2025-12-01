@@ -23,22 +23,59 @@ header {
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
     text-align: center;
     color: var(--cor5);
+    font-weight: normal;
+    min-height: 150px;
+    padding-top: 30px;
 }
 
 header > h1 {
     font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    margin: auto;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    padding-bottom: 20px;
 }
 
 body {
     background-color: var(--cor2);
+    font-family: var(--font-padrao);
 }
 
 main {
     background-color: var(--cor1);
 }
 
+section > h2 {
+    font-family: var(--font-destaque);
+}
+
 footer {
     background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor2);
 }
 
 /* Seção de feedbacks */
