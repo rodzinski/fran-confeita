@@ -22,6 +22,7 @@
 header {
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
     text-align: center;
+    color: var(--cor5);
 }
 
 header > h1 {
