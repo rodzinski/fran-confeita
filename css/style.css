@@ -70,9 +70,15 @@ nav > a:hover {
     color: var(--cor5);
 }
 
+nav > a.ativo {
+    background-color: var(--cor2);
+    color: var(--cor5);
+}
+
 body {
     background-color: var(--cor2);
     font-family: var(--font-padrao);
+    line-height: 1.5;
 }
 
 main {
@@ -88,15 +94,11 @@ main {
 
 
 main p {
-    margin: 15px 0px;
-    text-align: justify;
-    text-indent: 30px;
-    font-size: 1em;
-    line-height: 2em;
-}
-
-section > h2 {
-    font-family: var(--font-destaque);
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    text-indent: 0;
 }
 
 footer {
@@ -120,8 +122,103 @@ footer a:hover {
 
 /*TESTE DE ESTILO - Imagens/categorias */
 .categoria {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
+
+.categoria > h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.categoria > h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor3);
+    border-radius: 999px;
+    margin-top: 5px;
+}
+
+/*TESTE ZIGZAG*/
+/* Zig-zag nas categorias (apenas em telas maiores) */
+@media (min-width: 768px) {
+    .categoria:nth-child(even) .produto {
+        flex-direction: row-reverse;
+    }
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+
+    header > h1 {
+        font-size: 2.2em;
+    }
+
+    header > p {
+        font-size: 1em;
+    }
+
+    .produto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 8px 10px;
+    }
+
+    nav > a {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--cor5);
+    outline-offset: 2px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria > h2 {
+    margin-bottom: 15px;
+}
+
+.categoria > h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.categoria > h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor3);
+    border-radius: 999px;
+    margin-top: 5px;
+}
+
 
 .categoria > h2 {
     font-family: var(--font-destaque);
@@ -135,9 +232,15 @@ footer a:hover {
     gap: 20px;
     align-items: flex-start;
     flex-wrap: wrap; /* pra não quebrar no mobile */
-    background-color: #fff;
+    background-color: white;
     border-radius: 12px;
     padding: 15px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.produto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .produto img {
