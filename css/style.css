@@ -42,7 +42,7 @@ header > p {
     max-width: 500px;
     padding-right: 10px;
     padding-left: 10px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
     padding-bottom: 20px;
 }
 
@@ -356,4 +356,104 @@ nav a:focus-visible,
     object-fit: cover;
     vertical-align: middle;
     margin-right: 6px;
+}
+
+/* CATÁLOGO – carrossel horizontal de produtos */
+.grid-produtos {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+/* barra de rolagem mais discreta (opcional) */
+.grid-produtos::-webkit-scrollbar {
+    height: 6px;
+}
+.grid-produtos::-webkit-scrollbar-track {
+    background: transparent;
+}
+.grid-produtos::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 999px;
+}
+
+.card-produto {
+    min-width: 260px;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-produto img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.card-produto h3 {
+    font-size: 1.05rem;
+    color: var(--cor5);
+    margin-top: 0.3rem;
+}
+
+.card-produto p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.btn-pequeno {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+}
+
+main > section:first-of-type h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+main > section:first-of-type p {
+    margin-bottom: 20px;
+}
+
+.catalogo-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 20px 0;
+}
+
+.catalogo-links a {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor5);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.catalogo-links a:hover {
+    background-color: var(--cor2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.hint-scroll {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 5px;
 }
