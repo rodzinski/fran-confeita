@@ -424,7 +424,7 @@ main > section:first-of-type h2 {
 }
 
 main > section:first-of-type p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .catalogo-links {
@@ -456,4 +456,61 @@ main > section:first-of-type p {
     font-size: 0.85rem;
     opacity: 0.8;
     margin-bottom: 5px;
+}
+
+.feedbacks-intro h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+.feedbacks-intro p {
+    margin-bottom: 10px;
+}
+
+.feedback-resumo {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.feedback-resumo .nota-geral {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.feedback-resumo .estrela {
+    color: #f5b700; /* amarelinho das estrelas */
+    font-size: 1.1rem;
+}
+
+.feedback-resumo .nota {
+    font-weight: 600;
+    color: var(--cor5);
+}
+
+.pagina-feedbacks main {
+    background-color: #fbeff0; /* um tom levemente diferente de var(--cor1) */
+}
+
+.pagina-feedbacks .feedback-card {
+    background-color: #fff;
+}
+
+.feedbacks-cta {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.feedbacks-cta p {
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
