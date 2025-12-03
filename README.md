@@ -1,5 +1,4 @@
-<details>
-  <summary><strong>FranConfeita 🍰</strong></summary>
+<strong>FranConfeita 🍰</strong>
 
   <br>
 
@@ -16,5 +15,3 @@
 
   🚧 **Status do projeto:**  
   Em desenvolvimento / aprendizado contínuo — melhorias visuais e refinamentos de código serão adicionados conforme a evolução dos estudos.
-
-</details>
