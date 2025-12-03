@@ -11,7 +11,7 @@
   - Responsividade básica  
 
   ▶️ **Acesse o projeto online:**  
-  [https://rodzinski.github.io/franconfeita](https://rodzinski.github.io/franconfeita)
+  [https://rodzinski.github.io/franconfeita](https://rodzinski.github.io/fran-confeita)
 
   🚧 **Status do projeto:**  
   Em desenvolvimento / aprendizado contínuo — melhorias visuais e refinamentos de código serão adicionados conforme a evolução dos estudos.
