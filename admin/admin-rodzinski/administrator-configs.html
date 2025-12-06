@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="themeToggle">Ativar Tema de Natal 🎄</button>
+
+<script>
+(function(){
+  const btn = document.getElementById('themeToggle');
+
+  function updateText() {
+    const on = localStorage.getItem('theme') === 'christmas';
+    btn.textContent = on ? "Desativar Tema de Natal ❌" : "Ativar Tema de Natal 🎄";
+  }
+
+  btn.addEventListener('click', () => {
+    const isOn = localStorage.getItem('theme') === 'christmas';
+
+    if (isOn) {
+      localStorage.removeItem('theme');
+      document.documentElement.classList.remove('theme-christmas');
+      document.body.classList.remove('theme-christmas');
+      const snow = document.querySelector('.xmas-snow');
+      if (snow) snow.remove();
+    } else {
+      localStorage.setItem('theme', 'christmas');
+      document.documentElement.classList.add('theme-christmas');
+      document.body.classList.add('theme-christmas');
+      if (!document.querySelector('.xmas-snow')) {
+        const snow = document.createElement('div');
+        snow.className = 'xmas-snow';
+        document.body.appendChild(snow);
+      }
+    }
+    updateText();
+  });
+
+  updateText();
+})();
+</script>
+
+</body>
+</html>

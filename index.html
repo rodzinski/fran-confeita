@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FranConfeita - Bolos, Doces e Salgados em Montenegro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes/christmas.css">
     <link rel="shortcut icon" href="image/favicon.jpeg" type="image/x-icon">
     <meta name="description" content="FranConfeita - bolos, doces, salgados e kits festa artesanais para aniversários e comemorações. Peça seu orçamento pelo WhatsApp.">
     <meta property="og:title" content="FranConfeita - Bolos, Doces e Salgados em Montenegro">
@@ -17,6 +18,27 @@
 
 
 </head>
+<script>
+    (function() {
+        function applyTheme() {
+            const isOn = localStorage.getItem('theme') === 'christmas';
+            if (isOn) {
+                document.documentElement.classList.add('theme-christmas');
+                document.addEventListener('DOMContentLoaded', function(){
+                    document.body.classList.add('theme-christmas');
+
+                    if (!document.querySelector('.xmas-snow')) {
+                        const snow = document.createElement('div');
+                        snow.className = 'xmas-snow'
+                        document.body.appendChild(snow);
+                    }
+                });
+            }
+        }
+        applyTheme();
+    })();
+</script>
+
 <body>
     <header>
         <img src="image/favicon.jpeg" alt="Logo FranConfeita" class="logo-site">
@@ -43,6 +65,31 @@
                 <div class="descricao">
                     <p>
                         Bolos artesanais preparados com ingredientes selecionados, ideais para aniversários, festas e momentos especiais.
+                    </p>
+                    <ul>
+                        <li>
+                            Bolos simples e decorados
+                        </li>
+                        <li>
+                            Sabores tradicionais e especiais
+                        </li>
+                        <li>
+                            Opções doces e salgados
+                        </li>
+                    </ul>
+                    <a href="pages/contato.html" class="btn">Peça seu orçamento</a>
+                </div>
+            </div>
+        </section>
+        <section class="categoria">
+            <h2>
+                Panetones
+            </h2>
+            <div class="produto">
+                <img src="image/bolo.png" alt="Bolo decorado branco" loading="lazy">
+                <div class="descricao">
+                    <p>
+                        textinho para panetone.
                     </p>
                     <ul>
                         <li>
