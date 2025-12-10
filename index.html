@@ -15,30 +15,7 @@
     <meta property="og:locale" content="pt_BR">
 
 <meta name="author" content="FranConfeita">
-
-
 </head>
-<script>
-    (function() {
-        function applyTheme() {
-            const isOn = localStorage.getItem('theme') === 'christmas';
-            if (isOn) {
-                document.documentElement.classList.add('theme-christmas');
-                document.addEventListener('DOMContentLoaded', function(){
-                    document.body.classList.add('theme-christmas');
-
-                    if (!document.querySelector('.xmas-snow')) {
-                        const snow = document.createElement('div');
-                        snow.className = 'xmas-snow'
-                        document.body.appendChild(snow);
-                    }
-                });
-            }
-        }
-        applyTheme();
-    })();
-</script>
-
 <body>
     <header>
         <img src="image/favicon.jpeg" alt="Logo FranConfeita" class="logo-site">
@@ -86,7 +63,7 @@
                 Panetones
             </h2>
             <div class="produto">
-                <img src="image/bolo.png" alt="Bolo decorado branco" loading="lazy">
+                <img src="image/panetone.png" alt="Bolo decorado branco" loading="lazy">
                 <div class="descricao">
                     <p>
                         textinho para panetone.
