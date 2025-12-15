@@ -288,15 +288,37 @@ footer a:hover {
 }
 
 .card-produto h3 {
-    font-size: 1.05rem;
+    font-size: 1.05em;
     color: var(--cor5);
-    margin-top: 0.3rem;
+    margin-top: 0.3em;
+    min-height: 2.6em;
 }
 
 .card-produto p {
     font-size: 0.95rem;
     line-height: 1.4;
 }
+
+.card-produto a.btn {
+    margin-top: auto;
+}
+
+.card-extra {
+    background-color: var(--cor2);
+    border: 2px dashed rgba(0,0,0,0.15);
+    text-align: center;
+    justify-content: center;
+}
+
+.card-extra h3 {
+    font-family: var(--font-destaque);
+    font-size: 1.2rem;
+}
+
+.card-extra p {
+    font-size: 0.9rem;
+}
+
 
 .btn-pequeno {
     padding: 8px 14px;
