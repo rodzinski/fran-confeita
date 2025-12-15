@@ -267,6 +267,14 @@ footer a:hover {
     border-radius: 999px;
 }
 
+.categoria-natal h2::after {
+    background-color: #b30000; /* vermelho natalino */
+}
+
+.categoria-natal .card-produto {
+    border: 1px solid rgba(179, 0, 0, 0.15);
+}
+
 .card-produto {
     min-width: 260px;
     max-width: 320px;
