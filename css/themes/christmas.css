@@ -1,1 +1,587 @@
-/*criar theme separado, que vai ser aplicado no dia, e depois removo manualmente, mais facil que envolver js
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*==================== Base ====================*/
+
+:root {
+    --cor1:#f2e0df;
+    --cor2:#F2c9c9;
+    --cor3:#bf8450;
+    --cor4:#bf6f6f;
+    --cor5:#591902;
+
+    --font-destaque: 'Pacifico', cursive;
+    --font-padrao: 'Poppins', Arial, Verdana, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor2);
+    font-family: var(--font-padrao);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*==================== Layout Global ====================*/
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
+    text-align: center;
+    color: var(--cor5);
+    font-weight: normal;
+    min-height: 150px;
+    padding-top: 30px;
+}
+
+header > h1 {
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    margin: auto;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
+    padding-bottom: 20px;
+}
+
+nav {
+    background-color: var(--cor4);
+    padding: 10px 20px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: var(--cor2);
+    color: var(--cor5);
+}
+
+nav > a.ativo {
+    background-color: var(--cor2);
+    color: var(--cor5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+nav a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--cor5);
+    outline-offset: 2px;
+}
+
+main {
+    background-color: var(--cor1);
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto 30px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 1;
+}
+
+main p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    text-indent: 0;
+}
+
+footer {
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
+/*==================== Componentes ====================*/
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria > h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.categoria > h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor3);
+    border-radius: 999px;
+    margin-top: 5px;
+}
+
+.produto {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* pra não quebrar no mobile */
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.produto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.produto img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.descricao {
+    flex: 1;
+}
+
+.descricao p {
+    margin: 10px 0;
+    text-align: left;
+    text-indent: 0;
+    line-height: 1.6;
+}
+
+.descricao ul {
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+.descricao li {
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor3);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--cor5);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-site {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.logo-footer {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/*==================== Páginas específicas ====================*/
+
+/*====== Catálogo – carrossel de produtos =====*/
+
+.grid-produtos {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+/* barra de rolagem mais discreta */
+.grid-produtos::-webkit-scrollbar {
+    height: 6px;
+}
+.grid-produtos::-webkit-scrollbar-track {
+    background: transparent;
+}
+.grid-produtos::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 999px;
+}
+
+.card-produto {
+    min-width: 260px;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-produto img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.card-produto h3 {
+    font-size: 1.05rem;
+    color: var(--cor5);
+    margin-top: 0.3rem;
+}
+
+.card-produto p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.btn-pequeno {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+}
+
+main > section:first-of-type h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+main > section:first-of-type p {
+    margin-bottom: 10px;
+}
+
+.catalogo-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 20px 0;
+}
+
+.catalogo-links a {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor5);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.catalogo-links a:hover {
+    background-color: var(--cor2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.hint-scroll {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+/*====== Feedbacks =====*/
+
+.feedbacks-galeria {
+    padding: 2rem 1rem;
+}
+
+.feedbacks-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+/* Tirar barra de rolagem exagerada em alguns navegadores */
+.feedbacks-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.feedbacks-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.feedbacks-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 999px;
+}
+
+.feedback-card {
+    min-width: 260px;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.feedback-card img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-card figcaption {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.feedbacks-intro h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+.feedbacks-intro p {
+    margin-bottom: 10px;
+}
+
+.feedback-resumo {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.feedback-resumo .nota-geral {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.feedback-resumo .estrela {
+    color: #f5b700; /* amarelinho das estrelas */
+    font-size: 1.1rem;
+}
+
+.feedback-resumo .nota {
+    font-weight: 600;
+    color: var(--cor5);
+}
+
+.pagina-feedbacks main {
+    background-color: #fbeff0; /* um tom levemente diferente de var(--cor1) */
+}
+
+.pagina-feedbacks .feedback-card {
+    background-color: #fff;
+}
+
+.feedbacks-cta {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.feedbacks-cta p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/*====== Página Contato =====*/
+
+.pagina-contato main {
+    background-color: #fbeff0; /* bem suave, combina com a paleta */
+}
+
+.contato-intro h2 {
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+.contato-intro p {
+    margin-bottom: 15px;
+}
+
+.contato-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0 20px 0;
+}
+
+.contato-acoes .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos específicos por canal */
+.btn-whatsapp {
+    background-color: #25d366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5b;
+}
+
+.btn-instagram {
+    background-color: #bf4f8f;
+}
+
+.btn-instagram:hover {
+    background-color: #a13f78;
+}
+
+.contato-info, .contato-dicas {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.contato-info p {
+    margin: 4px 0;
+}
+
+.contato-dicas h3 {
+    font-size: 1.05rem;
+    color: var(--cor5);
+    margin-bottom: 6px;
+}
+
+.contato-dicas ul {
+    margin: 8px 0 8px 18px;
+}
+
+.contato-dicas li {
+    margin-bottom: 4px;
+}
+
+/*==================== Media Queries ====================*/
+
+/* Imagens em zig-zag + contato cards em telas maiores */
+@media (min-width: 768px) {
+
+    /* imagens em zig-zag */
+    .categoria:nth-child(even) .produto {
+        flex-direction: row-reverse;
+    }
+
+    /* contato – versão cards */
+    .contato-acoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contato-acoes .btn {
+        width: auto;
+        min-width: 260px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile bem pequeno */
+@media (max-width: 480px) {
+    header > h1 {
+        font-size: 2em;
+    }
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+
+    header > h1 {
+        font-size: 2.2em;
+    }
+
+    header > p {
+        font-size: 1em;
+    }
+
+    .produto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 8px 10px;
+    }
+
+    nav > a {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+    }
+}
