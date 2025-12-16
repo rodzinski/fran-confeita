@@ -5,11 +5,11 @@
 /*==================== Base ====================*/
 
 :root {
-    --cor1:#f2e0df;
-    --cor2:#F2c9c9;
-    --cor3:#bf8450;
-    --cor4:#bf6f6f;
-    --cor5:#591902;
+    --cor1: #f2e0df;
+    --cor2: #F2c9c9;
+    --cor3: #bf8450;
+    --cor4: #bf6f6f;
+    --cor5: #591902;
 
     --font-destaque: 'Pacifico', cursive;
     --font-padrao: 'Poppins', Arial, Verdana, Helvetica, sans-serif;
@@ -45,14 +45,14 @@ header {
     padding-top: 30px;
 }
 
-header > h1 {
+header>h1 {
     font-family: var(--font-destaque);
     margin-bottom: 20px;
     font-size: 3em;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
 
-header > p {
+header>p {
     font-family: var(--font-padrao);
     font-size: 1.2em;
     margin: auto;
@@ -73,7 +73,7 @@ nav {
     flex-wrap: wrap;
 }
 
-nav > a {
+nav>a {
     color: var(--cor1);
     padding: 10px;
     border-radius: 5px;
@@ -82,12 +82,12 @@ nav > a {
     transition-duration: 0.5s;
 }
 
-nav > a:hover {
+nav>a:hover {
     background-color: var(--cor2);
     color: var(--cor5);
 }
 
-nav > a.ativo {
+nav>a.ativo {
     background-color: var(--cor2);
     color: var(--cor5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -144,7 +144,7 @@ footer a:hover {
     margin-bottom: 40px;
 }
 
-.categoria > h2 {
+.categoria>h2 {
     font-family: var(--font-destaque);
     font-size: 2rem;
     color: var(--cor5);
@@ -152,7 +152,7 @@ footer a:hover {
     position: relative;
 }
 
-.categoria > h2::after {
+.categoria>h2::after {
     content: "";
     display: block;
     width: 60px;
@@ -166,7 +166,8 @@ footer a:hover {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    flex-wrap: wrap; /* pra não quebrar no mobile */
+    flex-wrap: wrap;
+    /* pra não quebrar no mobile */
     background-color: white;
     border-radius: 12px;
     padding: 15px;
@@ -223,6 +224,15 @@ footer a:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
+.hero-acoes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+
 .logo-site {
     width: 80px;
     height: 80px;
@@ -259,16 +269,19 @@ footer a:hover {
 .grid-produtos::-webkit-scrollbar {
     height: 6px;
 }
+
 .grid-produtos::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .grid-produtos::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 999px;
 }
 
 .categoria-natal h2::after {
-    background-color: #b30000; /* vermelho natalino */
+    background-color: #b30000;
+    /* vermelho natalino */
 }
 
 .categoria-natal .card-produto {
@@ -281,7 +294,7 @@ footer a:hover {
     background-color: #fff;
     border-radius: 12px;
     padding: 0.75rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -313,7 +326,7 @@ footer a:hover {
 
 .card-extra {
     background-color: var(--cor2);
-    border: 2px dashed rgba(0,0,0,0.15);
+    border: 2px dashed rgba(0, 0, 0, 0.15);
     text-align: center;
     justify-content: center;
 }
@@ -333,14 +346,14 @@ footer a:hover {
     font-size: 0.85rem;
 }
 
-main > section:first-of-type h2 {
+main>section:first-of-type h2 {
     font-family: var(--font-destaque);
     font-size: 2rem;
     color: var(--cor5);
     margin-bottom: 5px;
 }
 
-main > section:first-of-type p {
+main>section:first-of-type p {
     margin-bottom: 10px;
 }
 
@@ -355,7 +368,7 @@ main > section:first-of-type p {
     padding: 6px 12px;
     border-radius: 999px;
     background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -365,7 +378,7 @@ main > section:first-of-type p {
 
 .catalogo-links a:hover {
     background-color: var(--cor2);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
 }
 
@@ -393,9 +406,11 @@ main > section:first-of-type p {
 .feedbacks-scroll::-webkit-scrollbar {
     height: 6px;
 }
+
 .feedbacks-scroll::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .feedbacks-scroll::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 999px;
@@ -408,7 +423,7 @@ main > section:first-of-type p {
     border-radius: 12px;
     padding: 0.75rem;
     scroll-snap-align: start;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .feedback-card img {
@@ -438,7 +453,7 @@ main > section:first-of-type p {
     background-color: #fff;
     border-radius: 12px;
     padding: 12px 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     margin-top: 10px;
     font-size: 0.95rem;
 }
@@ -451,7 +466,8 @@ main > section:first-of-type p {
 }
 
 .feedback-resumo .estrela {
-    color: #f5b700; /* amarelinho das estrelas */
+    color: #f5b700;
+    /* amarelinho das estrelas */
     font-size: 1.1rem;
 }
 
@@ -461,7 +477,8 @@ main > section:first-of-type p {
 }
 
 .pagina-feedbacks main {
-    background-color: #fbeff0; /* um tom levemente diferente de var(--cor1) */
+    background-color: #fbeff0;
+    /* um tom levemente diferente de var(--cor1) */
 }
 
 .pagina-feedbacks .feedback-card {
@@ -472,7 +489,7 @@ main > section:first-of-type p {
     text-align: center;
     margin-top: 25px;
     padding-top: 15px;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .feedbacks-cta p {
@@ -483,7 +500,8 @@ main > section:first-of-type p {
 /*====== Página Contato =====*/
 
 .pagina-contato main {
-    background-color: #fbeff0; /* bem suave, combina com a paleta */
+    background-color: #fbeff0;
+    /* bem suave, combina com a paleta */
 }
 
 .contato-intro h2 {
@@ -526,11 +544,12 @@ main > section:first-of-type p {
     background-color: #a13f78;
 }
 
-.contato-info, .contato-dicas {
+.contato-info,
+.contato-dicas {
     background-color: #fff;
     border-radius: 12px;
     padding: 12px 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     font-size: 0.95rem;
     margin-top: 10px;
 }
@@ -558,6 +577,17 @@ main > section:first-of-type p {
 /* Imagens em zig-zag + contato cards em telas maiores */
 @media (min-width: 768px) {
 
+    .hero-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-acoes .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
     /* imagens em zig-zag */
     .categoria:nth-child(even) .produto {
         flex-direction: row-reverse;
@@ -579,7 +609,7 @@ main > section:first-of-type p {
 
 /* Mobile bem pequeno */
 @media (max-width: 480px) {
-    header > h1 {
+    header>h1 {
         font-size: 2em;
     }
 }
@@ -587,11 +617,11 @@ main > section:first-of-type p {
 /* Responsividade geral */
 @media (max-width: 768px) {
 
-    header > h1 {
+    header>h1 {
         font-size: 2.2em;
     }
 
-    header > p {
+    header>p {
         font-size: 1em;
     }
 
@@ -610,7 +640,7 @@ main > section:first-of-type p {
         padding: 8px 10px;
     }
 
-    nav > a {
+    nav>a {
         padding: 6px 8px;
         font-size: 0.9rem;
     }
