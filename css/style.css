@@ -544,6 +544,10 @@ main>section:first-of-type p {
     background-color: #a13f78;
 }
 
+.contato-info p > strong {
+    color: var(--cor5);
+}
+
 .contato-info,
 .contato-dicas {
     background-color: #fff;
